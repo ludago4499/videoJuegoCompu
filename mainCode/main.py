@@ -1,18 +1,22 @@
 import numpy as np
+import game_rules
 
-empty_board = np.zeros((10,10))
-
-print (empty_board)
-
-
-def chooseCell (row: int, column: int, player_number: int) -> bool:
+row_number = int(input("Filas para jugar el juego: "))
+col_number = int(input("Columnas para jugar el juego: "))
 
 
-def availablePlayer1 (row: int, column:int) -> bool:
-    if (row<=4 and column <=4):
-        return True
-    else:
-        return False
+board = np.zeros((row_number,col_number)) # create  an empty board
+game_in_progress = True
+player_turn = 1 # Player 1 starts
+while (game_in_progress):
+    print (board)
+    flag = True
+    while (flag):
+        print ("Jugador " + str(player_turn), ", dónde quiere colocar?")
+        row_selected  = int(input("Mencione una fila: "))
+        col_selected = int(input("Menciona una columna: "))
+        
 
-    
+
+
 
